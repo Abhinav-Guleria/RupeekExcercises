@@ -1,10 +1,13 @@
-if(true) {
-    //no block scope
-    var priceOfIphone =39999;
+if( true ) {
+    // no block scope
+    var priceOfIPhone11 = 45999;
 
-    //has blcok scope
-    let priceOfGalaxy20 =49999;
+    // has block scope
+    let priceOfSamsungGalaxy20 = 49999;
 
+    const nextIPhone = 12;
+    nextIPhone++;
 }
-console.log(priceOfIphone);
-console.log(priceOfGalaxy20);
+
+console.log( priceOfIPhone11 );
+console.log( priceOfSamsungGalaxy20 );
