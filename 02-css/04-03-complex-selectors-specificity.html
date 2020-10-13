@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="04-external.css">
+        <style>
+            /* ( 0, 1, 2, 5 ) */
+            html body div.intro ol#menu > li:hover {
+
+            }
+            
+            /* .class is "more specific" than type selector */
+            /* id selector > class selector > type selctor */
+            div {
+                width: 100px;
+                height: 100px;
+            }
+
+            /* specificity : ( 0, num_ids, num_classes, num_type ) */
+            /* ( 0, 1, 1, 0 ) */
+            .x#a {
+                background-color: navy;
+            }
+            
+            /* ( 0, 1, 0, 1 ) */
+            div#a {
+                background-color: purple;
+            }
+            
+            #a {
+                background-color: brown;
+            }
+
+            .x {
+                background-color: gold;
+                background-color: olive;
+            }
+
+            div {
+                background-color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- inline style have specificity ( 1, 0, 0, 0 ) -->
+        <div class="x" id="a"></div>
+        
+    </body>
+</html>

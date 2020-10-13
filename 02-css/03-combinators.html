@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* descendant selector */
+            div a {
+                color: goldenrod;
+            }
+
+            /* no spaces */
+            p.x {
+                color: blue;
+            }
+            
+            p .x { /* another descendant selector */
+                color: green;
+            }
+
+            /* child selector */
+            p > .x {
+                font-size: 2em;
+            }
+
+            /* complex selector */
+            /* how can you describe this? */
+            /* selects an elements with id a-2-2 that lies within a span parent, which in turn lies somewhere within (i.e. a descendant of) an element with class x */
+            .x span > #a-2-2 {
+                text-decoration: overline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="x y">
+            <p id="p-1">
+                <a href="#">Link 1</a>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit libero porro velit veniam. Hic officia temporibus natus corporis dignissimos facere dicta perspiciatis, delectus quisquam. Tempora velit atque ut ipsam a!
+            </p>
+            <p id="p-2">
+                <a href="#" id="a-2" class="x">Link 2</a>
+                <span><a href="#" id="a-2-2" class="x">Link 2-2</a></span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ea nemo dolore quos obcaecati eos ut dignissimos dolores, necessitatibus doloremque iure fugit. Ratione quasi illum voluptatibus eos beatae labore distinctio.
+            </p>
+
+            <a href="#">Link 3</a>
+        </div>
+
+        <a href="#" id="a-4" class="y">Link 4</a>
+
+        <p class="x" id="p-3">
+            <a href="#">Link 5</a>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad veniam dolorum rerum voluptatem nihil quis quo, aliquam nostrum cum ipsam, blanditiis quibusdam eius mollitia assumenda ullam asperiores possimus cumque enim?
+        </p>
+    </body>
+</html>
