@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="04-external.css">
+        <style>
+            /* .class is "more specific" than type selector */
+            /* id selector > class selector > type selctor */
+            div {
+                width: 100px;
+                height: 100px;
+            }
+            
+            #a {
+                background-color: brown;
+            }
+
+            .x {
+                background-color: gold;
+                background-color: olive;
+            }
+
+            div {
+                background-color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="x" id="a"></div>
+        
+    </body>
+</html>
