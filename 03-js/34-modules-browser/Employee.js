@@ -1,5 +1,5 @@
 // adefault export is being imported
-import Human from './Person.js';
+import Human, { x, y } from './Person.js';
 
 export default class Employee extends Human {
 
