@@ -16,3 +16,7 @@ npm run serve
 
 5. Add Bootstrap CSS library
 npm i bootstrap
+__NOTE__: Please use Vue Bootstrap if you plan to use the JS components of Bootstrap
+
+6. Add Vue router
+npm i vue-router

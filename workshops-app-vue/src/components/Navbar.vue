@@ -3,10 +3,10 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <ul class="nav navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
+                <router-link class="nav-link" to="/" exact>Home</router-link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/workshops">Workshops</a>
+                <router-link class="nav-link" to="/workshops" exact>Workshops</router-link>
             </li>
         </ul>
     </nav>
