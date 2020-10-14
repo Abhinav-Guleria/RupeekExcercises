@@ -29,7 +29,7 @@ john.foo.call( jane );
 const globalFoo = john.foo;
 
 john.foo(); // "this" is john object
-globalFoo(); // "this" is ???
+globalFoo(); // "this" is window (browser) | global (Node.js)
 
 // does not call the function
 // johnFoo() -> john.foo.call( john );
