@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p class="x">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem id quibusdam omnis nulla, quasi doloremque adipisci architecto magnam eos eaque aliquam. Ullam, doloremque obcaecati officiis atque nihil soluta labore aspernatur.
+        </p>
+        <p id="para-2" class="x">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem id quibusdam omnis nulla, quasi doloremque adipisci architecto magnam eos eaque aliquam. Ullam, doloremque obcaecati officiis atque nihil soluta labore aspernatur.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem id quibusdam omnis nulla, quasi doloremque adipisci architecto magnam eos eaque aliquam. Ullam, doloremque obcaecati officiis atque nihil soluta labore aspernatur.
+        </p>
+
+        <!-- <script src=""></script> -->
+        <script>
+            console.log( document );
+            console.log( document.children );
+            
+            // html
+            console.log( document.children[0] ); 
+            
+            // [ head, body ]
+            console.log( document.children[0].children );
+
+            console.log( document.body ); // shortcut property
+
+            console.log( document.getElementById( 'para-1' ) );
+            
+            // provide any CSS selector
+            // selects first match
+            console.log( document.querySelector( '#para-1' ) );
+
+            console.log( document.querySelector( '.x' ) );
+
+            // select all matches - returns something like an array
+            console.log( document.querySelector( '.x' ) );
+        </script>
+    </body>
+</html>

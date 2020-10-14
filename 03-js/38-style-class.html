@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .para {
+                font-size: 24px;
+                line-height: 2;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cumque cupiditate assumenda labore nulla? Iusto, animi. Iure voluptates repudiandae tenetur architecto nisi. Doloribus quaerat itaque velit delectus magni numquam quidem?
+        </p>
+        <script>
+            const para = document.querySelectorAll( 'p' )[0];
+            para.style.backgroundColor = 'gold';
+            para.classList.add( 'para' );
+
+            setTimeout(function() {
+                para.classList.remove( 'para' ); // toggle()
+            }, 5000);
+        </script>
+    </body>
+</html>

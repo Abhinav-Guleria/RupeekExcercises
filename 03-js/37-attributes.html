@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perferendis hic odio veritatis sed accusamus obcaecati! Iste, rem neque eos ea pariatur, qui odio facilis quod perspiciatis, magnam ipsa! Minima.
+        <a href="https://www.google.com" data-type="search">Google</a>
+    </p>
+    <Script>
+        console.log( document.querySelector( 'a' ).getAttribute( 'data-type' ) );
+        setTimeout(function() {
+            const link = document.querySelector( 'a' );
+            
+            link.innerHTML = 'Facebook';
+            
+            console.log( link.getAttribute( 'href' ) ); // works for all attributes
+            console.log( link.getAttribute( 'data-type' ) ); // works for all attributes
+            console.log( link.href ); // only for some standard attributes
+
+            link.setAttribute( 'href', 'https://www.facebook.com' );
+            console.log( link.getAttribute( 'href' ) );
+        }, 10000);
+    </Script>
+</body>
+</html>

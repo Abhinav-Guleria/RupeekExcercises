@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .para {
+                font-size: 24px;
+                line-height: 2;
+                padding: 20px;
+                background-color: gold;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Toggle class .para on paragraph</button>
+        <!-- <button onclick="document.querySelector( 'p' ).classList.toggle( 'para' );">Toggle class .para on paragraph</button> -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nihil esse neque dolores fugiat molestiae debitis minima, quo ut quaerat tenetur! Sequi quisquam molestiae illo repellendus quae maxime deserunt aliquam.
+        </p>
+
+        <form>
+            <input type="text" name="name" id="name" />
+            <button>Submit</button>
+        </form>
+
+        <a href="https://www.google.com">Google</a>
+
+        <script>
+            // document.querySelector( 'button' ).onclick = function() {
+            //     document.querySelector( 'p' ).classList.toggle( 'para' );
+            // };
+            
+            // document.querySelector( 'button' ).onclick = function() {
+            //     document.querySelector( 'p' ).classList.toggle( 'bold' );
+            // };
+
+            document.querySelector( 'button' ).addEventListener( 'click', function( event ) {
+                console.log( event );
+                document.querySelector( 'p' ).classList.toggle( 'para' );
+            });
+            
+            document.querySelector( 'button' ).addEventListener( 'click', function( event ) {
+                document.querySelector( 'p' ).classList.toggle( 'bold' );
+            });
+
+            document.querySelector( 'a' ).addEventListener( 'click', function( event ) {
+                // event.preventDefault();
+            });
+
+            document.querySelector( 'form' ).addEventListener( 'submit', function( event ) {
+                if( document.querySelector( '#name' ).value.trim() === '' ) {
+                    alert( 'Please fill in the fields' );
+                    event.preventDefault();
+                }
+            });
+        </script>
+    </body>
+</html>
