@@ -1,4 +1,4 @@
-# workshops-app-vue
+# workshop_app_vue
 
 ## Project setup
 ```

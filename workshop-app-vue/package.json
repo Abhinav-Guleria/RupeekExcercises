@@ -1,15 +1,13 @@
 {
-  "name": "workshops-app-vue",
+  "name": "workshop_app_vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-      "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
