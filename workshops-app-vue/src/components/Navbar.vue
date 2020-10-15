@@ -1,6 +1,6 @@
 <template>
     <!-- b4-navbar-minimal-ul -->
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <nav class="navbar navbar-expand navbar-coral bg-light">
         <ul class="nav navbar-nav">
             <li class="nav-item active">
                 <router-link class="nav-link" to="/" exact>Home</router-link>
