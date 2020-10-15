@@ -14,9 +14,12 @@ cd workshops-app-vue
 4. Start the app
 npm run serve
 
-5. Add Bootstrap CSS library
-npm i bootstrap
+5. Add Bootstrap CSS library and Fontawesome
+npm i bootstrap @fortawesome/fontawesome-free
 __NOTE__: Please use Vue Bootstrap if you plan to use the JS components of Bootstrap
 
 6. Add Vue router
 npm i vue-router
+
+7. Add axios
+npm i axios
