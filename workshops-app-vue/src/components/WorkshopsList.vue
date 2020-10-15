@@ -5,8 +5,8 @@
                 <h1>
                     Workshops
                     <div class="float-right">
-                        <button class="btn btn-sm btn-primary">
-                            Show details
+                        <button class="btn btn-sm btn-primary" @click="toggleDetails">
+                            {{showDetails ? 'Hide details' : 'Show Details'}}
                         </button>
                     </div>
                 </h1>
@@ -41,7 +41,7 @@
 
         <div class="row" v-if="status === 'LOADED'">
             <div class="col-4 d-flex" v-for="workshop in workshops" :key="workshop.id">
-                <a href="#" class="text-reset text-decoration-none w-100 my-3 d-flex flex-column">
+                <router-link :to="{ name: 'workshop-details', params: { id: workshop.id } }" class="text-reset text-decoration-none w-100 my-3 d-flex flex-column">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-img-container d-flex flex-column justify-content-center">
@@ -55,11 +55,11 @@
                                 <div>
                                     <span>{{workshop.time}}</span>
                                 </div>
-                                <div class="my-3" v-html="workshop.description"></div>
+                                <div class="my-3" v-if="showDetails" v-html="workshop.description"></div>
                             </div>
                         </div>
                     </div>
-                </a>
+                </router-link>
             </div>
         </div>
     </div>
@@ -74,11 +74,14 @@ export default {
     name: 'WorkshopsList',
     data() {
         return {
-            status: LOADING
+            status: LOADING,
+            showDetails: true
         };
     },
     methods: {
-
+        toggleDetails() {
+            this.showDetails = !this.showDetails;
+        }
     },
     mounted() {
         fetchWorkshops()
@@ -100,7 +103,7 @@ export default {
 }
 
 .card:hover {
-    box-shadow: 0px 0px 4px 0px coral;
+    box-shadow: 0px 0px 4px 0px goldenrod;
     background-color: #fcfcfc;
 }
 

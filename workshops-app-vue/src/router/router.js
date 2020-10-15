@@ -15,6 +15,11 @@ export default new Router({
             name: 'workshops',
             path: "/workshops",
             component: () => import( '@/components/WorkshopsList' )
+        },
+        {
+            name: 'workshop-details',
+            path: "/workshops/:id",
+            component: () => import( '@/components/WorkshopDetails' )
         }
     ]
 });

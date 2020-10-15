@@ -23,3 +23,12 @@ npm i vue-router
 
 7. Add axios
 npm i axios
+
+-------
+
+Exercise
+========
+- Create components/WorkshopDetails.vue that is shown on route workshop-details (add route in router, and link in navbar)
+- In supplied files you will find workshops-app-vue/components/WorkshopDetails.vue
+- Load the details of this workshop in that page - http://workshops-server.herokuapp.com/workshops/1
+- Make sure to display loading and error messages
